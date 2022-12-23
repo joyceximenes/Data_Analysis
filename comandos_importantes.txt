@@ -1,0 +1,20 @@
+ABRIR ARQUIVO
+tabela = pd.read_excel("Vendas.xlsx")
+
+MOSTRAR COLUNAS E AGRUPAR POR
+tabela[["ID Loja", "Valor Final"]].groupby("ID Loja").sum()
+
+
+
+APAGAR COLUNA/LINHA
+tabela = tabela.drop("CLIENTNUM", axis=1) # 1 para coluna e 0 para linha 
+
+EXCLUI LINHA COM AO MENOS UM VALOR VAZIO
+tabela = tabela.dropna() 
+
+MOSTRA INFOS
+display(tabela.info())
+
+MOSTRA DADDOS COMO MEDIA, MAX
+display(tabela.describe()) 
+
