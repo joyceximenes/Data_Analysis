@@ -4,8 +4,6 @@ tabela = pd.read_excel("Vendas.xlsx")
 MOSTRAR COLUNAS E AGRUPAR POR
 tabela[["ID Loja", "Valor Final"]].groupby("ID Loja").sum()
 
-
-
 APAGAR COLUNA/LINHA
 tabela = tabela.drop("CLIENTNUM", axis=1) # 1 para coluna e 0 para linha 
 
@@ -16,5 +14,11 @@ MOSTRA INFOS
 display(tabela.info())
 
 MOSTRA DADDOS COMO MEDIA, MAX
-display(tabela.describe()) 
+display(tabela.describe())
 
+GRÁFICO
+grafico = pl.histogram(tabela, x = coluna, color = "Categoria")
+grafico.show()
+
+IMPORTAR
+import plotly.express as px
