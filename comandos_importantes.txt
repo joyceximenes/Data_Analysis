@@ -22,3 +22,5 @@ grafico.show()
 
 IMPORTAR
 import plotly.express as px
+
+https://colab.research.google.com/drive/1dG22IcBgakmR4UKEbX1IaHhUDQMMgYHc?usp=sharing
